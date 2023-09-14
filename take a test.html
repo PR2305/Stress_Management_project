@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+  body{
+    background-color:#f4e0cb;
+  }
+  
+  header{
+    font-family:Roboto;
+    font-size:26px;
+    colour:rgb(251, 174, 245);
+    font-weight:bold;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  
+  #survey-form{
+    background-color:#f9beeb;
+    font-family:Quicksand;
+    max-width:70%;
+    margin:auto;
+    padding:0;
+    border-radius:15px;
+  }
+  
+  #description{
+    text-align:center;
+    font-size:16px;
+    padding-top:17px;
+    font-weight:bold;
+  }
+  
+  .fieldset{
+    border-width:0;
+    padding-top:1%;
+  
+  }
+  
+  .sub-group{
+    position:relative;
+    right:30px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:1%;
+  }
+  
+  label.left{
+    width:30%;
+    padding-right:4%;
+    text-align:right;
+  }
+  
+  
+  .right{
+    width:30%;
+  }
+  
+  .input-field{
+    height:20px;
+    padding:5px;
+    border: 1px solid #fabbbb;
+    border-radius: 2px;
+  }
+  
+  #dropdown{
+    font-family:Quicksand;
+    height:30px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+  }
+  
+  .checkbox{
+    position:relative;
+    padding:3px;
+    right:3px;
+    bottom:15px;
+  }
+  
+  .radio{
+    position:relative;
+    padding:3px;
+    bottom:15px;
+  }
+  
+  h2{
+    position:relative;
+    bottom:8px;
+    font-size:16px;
+    text-align:center;
+    font-weight:bold;
+  }
+  
+  .commentbox{
+    text-align:center;
+  }
+  
+  textarea{
+    width:65%;
+    border-radius:4px;
+  }
+  
+  #submit{
+    background:#f1fb9f;
+    font-family:Roboto;
+    border-radius:4px;
+    font-size:23px;
+  }
+  
+  label:hover{
+    cursor:pointer;
+  }
+  
+  @media (max-width: 800px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    body {
+      font-size: 9px;
+    }
+  } </style>
+  <body>
+  <header>
+  <div id="title"><h1>Survey-form</h1>
+    </header>
+
+<form id="survey-form">
+
+  <div id="description">Let us begin</div><br>
+
+  <fieldset class="fieldset">
+
+    <div class="sub-group">
+      <label class="left" id="name-label" for="name">*Name:</label>
+    <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="sub-group">
+      <label class="left" id="email-label" for="email">*Email:</label>
+    <input type="email" name="Email-address" class="right input-field" placeholder="Enter your email" id="email" required>
+    </div>
+
+    <div class="sub-group">
+      <label  class="left" id="number-label" for="number">*Age:</label>
+    <input type="number" name="Age" placeholder="Age" min="1" max="100" class="right input-field" id="number">
+  </div>
+
+    <div class="sub-group">
+      <label class="left" id="handphone-label" for="handphone">*Handphone:</label>
+
+    <input type="text" placeholder="Phone Number" class="right input-field" id="handphone">
+  </div>
+
+    <div class="sub-group">
+      <label class="left" for="dropdown">*First time taking test?</label>
+
+      <select class="right dropdown" id="dropdown" name="dropdown">
+        <option selected disabled>Select an option</option>
+        <option value="first">First-Timer</option>
+        <option value="never">Done Before</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset">
+<div class="sub-group">
+<label class="left">
+  What was your first feeling when you woke up today?</label>
+
+ <ul style="list-style: none;" class="right">
+
+   <li class="checkbox"><label><input type="checkbox" name="game" value="exodus" >Excited</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="alcatraz">Sad</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="aokigahara" >Confused<label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="mausoleum" >Happy</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="castiglione" >Motivated</label></li>
+       </ul></div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio">Do you feel that you can cure yourself?</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">Yes</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">Maybe</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">No</label></li>
+   </ul>
+  </div></fieldset>
+
+     <fieldset class="fieldset">
+   <h2>Write about your whole day experience</h2>
+
+    <div class="commentbox">
+
+   <textarea rows="4"  placeholder="Enter your comment here..."></textarea>
+
+   <br></br>
+
+  <button id="submit" type="submit">Submit</button>
+       </div></fieldset>
+</form>
+</div>
+  </body>
+</html>
