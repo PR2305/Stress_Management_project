@@ -1,6 +1,10 @@
 **Stress Management Project using Machine Learning and Artificial Intelligence**
+## Azure Services Screenshots:-
 
 ## Project Overview
+![Screenshot 2023-10-04 122339](https://github.com/PR2305/Stress_Management_project/assets/116868314/06889332-d52a-4ca1-94e9-18a121272a96)
+
+![Screenshot 2023-10-04 122425](https://github.com/PR2305/Stress_Management_project/assets/116868314/df187d5d-df18-4d54-8203-f0f6dbb52400)
 
 This project aims to develop a Stress Management System utilizing Machine Learning (ML) and Artificial Intelligence (AI) techniques. The system is designed to help individuals manage their stress levels effectively through data-driven insights and personalized recommendations.
 
